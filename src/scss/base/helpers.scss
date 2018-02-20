@@ -1,0 +1,111 @@
+/*variables start*/
+
+$regular : "Lato", sans-serif;
+$light : "Lato Light", sans-serif;
+$medium : "Lato Medium", sans-serif;
+$semibold : "Lato Semibold", sans-serif;
+$bold : "Lato Bold", sans-serif;
+$italic : "Lato Italic", sans-serif;
+$lihgtitalic : "Lato LightItalic", sans-serif;
+$black : "Lato Black", sans-serif;
+
+/*variables end*/
+
+/*px to em function start*/
+
+@function em($px){
+
+  @return ($px / 16) * 1 + em;
+  
+}
+
+/*px to em function end*/
+
+/*media start*/
+@mixin media($min-width,$max-width){
+  @media (min-width: $min-width+ "px") and (max-width: $max-width+ "px"){
+    @content;
+  }
+}
+@mixin media-max($width){
+  @media only screen and (max-width: $width+ "px"){
+    @content;
+  }
+}
+
+@mixin media-min($width){
+  @media only screen and (min-width: $width+ "px"){
+    @content;
+  }
+}
+
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+/*media end*/
+
+/// Triangle helper mixin
+/// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+/// @param {Color} $color [currentcolor] - Triangle color 
+/// @param {Length} $size [1em] - Triangle size
+@mixin triangle($direction, $color: currentcolor, $width: 1em , $height: 2em) {
+	@if not index(top right bottom left, $direction) {
+		@error "Direction must be either `top`, `right`, `bottom` or `left`.";
+	}
+
+	width: 0;
+	height: 0;
+	content: '';
+	z-index: 2;
+
+	border-#{$direction}: $width solid $color;
+
+	$perpendicular-borders: ($height/2) solid transparent;
+
+	@if $direction == top or $direction == bottom {
+		border-left:   $perpendicular-borders;
+		border-right:  $perpendicular-borders;
+		} @else if $direction == right or $direction == left {
+			border-bottom: $perpendicular-borders;
+			border-top:    $perpendicular-borders;
+		}
+  }
+  
+  /* placeholder color */
+
+@mixin placeholder($color){
+  ::-webkit-input-placeholder {color:$color}
+  ::-moz-placeholder          {color:$color}/* Firefox 19+ */
+  :-moz-placeholder           {color:$color}/* Firefox 18- */
+  :-ms-input-placeholder      {color:$color}
+}
+
+
+/* center align */
+@mixin cent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin centX {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin centY {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
