@@ -1,0 +1,92 @@
+@import "../base/helpers.scss";
+@import "../base/sprite.scss";
+
+.login_block{
+    flex: 1 0 auto; 
+
+    &.hide{
+        display: none;
+    }   
+
+    & .logo_line{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 160px 0 0 0;    
+
+        & .logo{
+            display: block;
+            @include sprite($login-logo);
+        }
+    }   
+
+    & .login_form{
+        width: 469px;
+        margin: 157px auto 0 auto;
+
+        & .wrap{
+            margin: 13px 0 0 0;
+
+            & label{
+                display: block;
+                width: 100%;
+                max-width: 429px;
+                margin: 0 0 5px 0;
+                font-family: $regular;
+                font-size: em(12);
+                color: #b8b8b8;
+                text-align: center;
+            }
+            
+        }
+
+        & .input_wrap{
+            & input{
+                outline: none;
+                width: 100%;
+                max-width: 429px;
+                height: 40px;
+                padding: 0 5px;
+                font-family: $regular;
+                font-size: em(16);
+                color: #b8b8b8;
+                text-align: center;
+                border: 1px solid #e8e8e8;
+                border-radius: 10px;
+            }
+            & .hide_pass_btn{
+                margin: 0 0 0 15px;
+                font-size: 18px;
+                color: #b8b8b8;
+                text-decoration: none;
+
+                &.active{
+                    & i.close{
+                        display: none;
+                    }
+                    & i.open{
+                        display: inline;
+                    }
+                }
+
+                & i.open{
+                    display: none;
+                }
+            }
+        }
+
+        & .submit{
+            display: block;
+            width: 183px;
+            height: 40px;
+            margin: 32px auto 0 auto;
+            font-family: $bold;
+            font-size: em(16);
+            color: #fff;
+            background-color: $lightbluebg;
+            border: none;
+            border-radius: 10px;
+        }
+    }
+
+}

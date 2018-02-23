@@ -38,3 +38,8 @@ js-min: "node_modules/slick-carousel/slick/slick.min.js"<br>
 `src/page/[name]/[name].html`: page html file.<br>
 `src/page/[name]/[name].js`: main js file of page, import here existing JS files from src/js/components if you need, write code that needed only for this page.<br>
 `src/page/[name]/[name].scss`: main scss file of page, import here existing SCSS files from src/scss/components if you need, write code that needed only for this page.<br>
+
+
+<!-- examples -->
+
+https://gigster.com/

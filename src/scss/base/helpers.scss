@@ -1,6 +1,7 @@
 /*variables start*/
 
 $regular : "Lato", sans-serif;
+$regular2 : "Myriad Pro", sans-serif;
 $light : "Lato Light", sans-serif;
 $medium : "Lato Medium", sans-serif;
 $semibold : "Lato Semibold", sans-serif;
@@ -8,6 +9,15 @@ $bold : "Lato Bold", sans-serif;
 $italic : "Lato Italic", sans-serif;
 $lihgtitalic : "Lato LightItalic", sans-serif;
 $black : "Lato Black", sans-serif;
+
+
+/* colors */
+$lightgray: #e4e4e4;
+$gray: #787878;
+$gray3: #484848;
+$lightbluebg: #3da9d0;
+$purpletext: #65468b;
+
 
 /*variables end*/
 
@@ -109,3 +119,17 @@ $black : "Lato Black", sans-serif;
 	top: 50%;
 	transform: translateY(-50%);
 }
+
+
+/* scrollbar */
+
+@mixin scrollbar($width, $color) {
+	&::-webkit-scrollbar {
+	 width: $width;
+	}
+ 
+	&::-webkit-scrollbar-thumb {
+	 border-radius: 2px;
+	 box-shadow: inset $width*2 0 0  $color;
+	}
+ }

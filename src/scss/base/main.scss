@@ -7,10 +7,53 @@ body{
     font-size: 16px;
 }
 
+.container{
+    width: 100%;
+    max-width: 1763px;
+    margin: 0 auto;
+    &--full{
+        max-width: 100%;
+    }
+}
+
 .clearfix{
     &:after{
         content: " ";
         display: table;
         clear: both;
+    }
+}
+
+
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    height: 47px;
+    margin: 0 10px;
+    color: #e3e3e3;
+    text-decoration: none;
+    border-radius: 50%;
+    transform: translateY(50%);
+    transition: all .5s linear;
+     
+    &:hover{
+        transform: translateY(0%);
+    }   
+    &.violet{
+        background-color: #de5ca0;
+    }
+    &.purple_light{
+        background-color: #937dae;
+    }
+    &.blue{
+        background-color: #77c3de;
+    }
+    &.purple{
+        background-color: #65468b;
+    }
+    &.yellow{
+        background-color: #fbcf4f;
     }
 }

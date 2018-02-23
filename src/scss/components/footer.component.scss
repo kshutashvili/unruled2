@@ -1,0 +1,72 @@
+@import "../base/helpers.scss";
+
+.footer_component{
+    background-color: $lightbluebg;
+
+    & .content{
+        display: flex;
+        justify-content: space-between;
+        padding: 35px 75px 34px 75px;
+        
+        & .block{
+
+            &.contacts{
+                width: 100%;
+                max-width: 860px;
+            }
+
+            & .title{
+                font-family: $bold;
+                font-size: em(18);
+                color: #fff;
+                letter-spacing: .5px;
+            }
+
+            & .lists{
+                display: flex;
+                justify-content: space-between;
+
+                & .list{
+                    margin: 33px 0 0 0;
+                    padding: 0 0 0 14px;
+                    list-style-type: none;
+                    font-family: $regular;
+                    font-size: em(16);
+                    color: #fff;
+                    & li{
+                        margin: 0 0 16px 0;
+
+                        &:last-child{
+                            margin: 0;
+                        }
+
+                        & i{
+                            margin: 0 30px 0 0;
+                            &.fa-phone{
+                                font-size: 13px;
+                                transform: rotateY(190deg);
+                            }
+                        }
+
+                        & a{
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                        
+                    }
+                }
+            }
+
+        }
+    }
+
+    & .rights{
+        padding: 9.5px 0;
+        font-family: $regular;
+        font-size: em(12);
+        color: $lightbluebg;
+        text-align: center;
+        background-color: #fff;
+    }
+
+}

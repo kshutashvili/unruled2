@@ -49,6 +49,10 @@ const common = merge([
                 apiOptions: {
                     cssImageRef: "../../img/sprite.png"
                 }
+            }),
+            new webpack.ProvidePlugin({
+                $: "jquery",
+                jQuery: "jquery"
             })
         ]
     }
