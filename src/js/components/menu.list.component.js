@@ -4,9 +4,10 @@ export default () => {
     const $dropdown = $MenuList.find(".dropdown");
 
     $dropdown.each((i, elem) => {
-        
+
         $(elem).off("click");
-        $(elem).on("click", (e)=>{
+        $(elem).on("click", (e) => {
+
             $(elem).toggleClass("active");
 
         });

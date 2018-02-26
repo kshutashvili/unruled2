@@ -1,0 +1,104 @@
+/* base */
+
+@import "../../scss/base/fonts.scss";
+@import "../../scss/base/helpers.scss";
+@import "../../scss/base/sprite.scss";
+@import "../../scss/base/main.scss";
+
+/* external */
+
+@import "../../scss/external/fontawesome-all.css";
+
+/* common components */
+
+@import "../../scss/components/header.component.scss";
+@import "../../scss/components/footer.component.scss";
+@import "../../scss/components/menu.component.scss";
+@import "../../scss/components/login.form.component.scss";
+
+/* style */
+
+.header_component{
+    height: 889px;
+    background-image: url("../../img/about_header.png");
+    background-size: cover;
+
+    & .main_content_block{
+        display: flex;
+        align-items: center;
+
+        & .description{
+            width: 510px;
+            margin: 219px 0 0 356px;
+
+            & > .title{
+                font-family: $bold;
+                font-size: em(50);
+                color: #fff;
+                letter-spacing: 1.3px;
+            }
+
+            & .msg{
+                margin: 48px 0 0 0;
+                font-family: $regular;
+                font-size: em(20);
+                color: #fff;
+                letter-spacing: .4px;
+                line-height: 1.4;
+            }
+
+            & .arrow_down{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 29px;
+                height: 29px;
+                margin: 88px 0 0 0;
+                border-radius: 50%;
+                background-color: #fff;
+
+                & a{
+                    display: flex;
+                    color: $lightbluebg;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        & .logo_img{
+            display: block;
+            margin: 200px 0 0 318px;
+            @include sprite($about-logo);
+        }
+    }
+}
+
+.main_component{
+    padding: 0 0 74px 0;
+
+    & .content{
+        width: 100%;
+        max-width: 733px;
+        margin: 285px auto 0 auto;
+
+        & .title{
+            margin: 0 0 19px 0;
+            font-family: $bold;
+            font-weight: normal;
+            font-size: em(24);
+            color: #5d5c5c;
+            letter-spacing: .8px;
+            line-height: 1.5;
+        }
+
+        & .text{
+            margin: 0 0 21px 0;
+            font-family: $regular;
+            font-size: em(16);
+            color: #888888;
+            letter-spacing: .5px;
+            line-height: 1.4;
+        }
+    }
+
+}

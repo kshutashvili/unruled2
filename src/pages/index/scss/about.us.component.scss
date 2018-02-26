@@ -1,0 +1,123 @@
+@import "../../../scss/base/helpers.scss";
+
+/* about us component start */
+
+.about_us_component{
+    background-color: #f9f9f9;
+
+    & .content{
+        display: flex;
+        flex-wrap: wrap;
+
+        & .block{
+            position: relative;
+            display: flex;
+            width: 50%;
+            height: 263px;
+
+            &:after{
+                content: "";
+                position: absolute;
+                top: left;
+                width: 7px;
+                height: 100%;
+            }
+            &:hover{
+                & .info{
+                    &__title, &__text{
+                        color: #fff;
+                    }
+                    &__bottom{
+                        & .more{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            &.blue{
+                &:after, &:hover{
+                    background-color: $lightbluebg;
+                }
+            }
+
+            &.purple{
+                &:after, &:hover{
+                    background-color: #624888;
+                }
+            }
+
+            &.yellow{
+                &:after, &:hover{
+                    background-color: #f2af1c;
+                }
+            }
+
+            &.violet{
+                &:after, &:hover{
+                    background-color: #d01777;
+                }
+            }
+            
+            & .icon_block{
+                display: flex;
+                justify-content: center;
+                flex-shrink: 0;
+                width: 148px;
+                padding: 25px 0 0 0;
+
+                & .icon{
+
+                    &.notebook{
+                        @include sprite($notebook);
+                    }
+                    &.list{
+                        @include sprite($list);
+                    }
+                    &.calendar{
+                        @include sprite($calendar);
+                    }
+                    &.file{
+                        @include sprite($file);
+                    }
+                }
+            }
+
+
+            & .info{
+                padding: 37px 0 0 0;
+                font-family: $regular;
+
+                &__title{
+                    font-size: em(24);
+                    color: $lightbluebg;
+                    letter-spacing: .4px;
+                }
+
+                &__text{
+                    margin: 25px 0 0 0;
+                    padding: 0 153px 0 0;
+                    line-height: 1.6;
+                    font-size: em(18);
+                    color: $gray;
+                    letter-spacing: .45px;
+                }
+                &__bottom{
+                    display: flex;
+                    justify-content: flex-end;
+                    margin: 7px 0 0 0;
+                    padding: 0 70px 0 0;
+
+                    & .more{
+                        font-family: $bold;
+                        font-size: em(20);
+                        color: transparent;
+                        text-decoration: none;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* about us component start */

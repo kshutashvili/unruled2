@@ -16,13 +16,15 @@
 
         & .logo{
             display: block;
+            margin: 0 0 0 21px;
             @include sprite($login-logo);
         }
     }   
 
     & .login_form{
-        width: 469px;
-        margin: 157px auto 0 auto;
+        width: 100%;
+        max-width: 470px;
+        margin: 157px 0 0 263px;
 
         & .wrap{
             margin: 13px 0 0 0;
@@ -75,18 +77,70 @@
             }
         }
 
-        & .submit{
-            display: block;
-            width: 183px;
-            height: 40px;
-            margin: 32px auto 0 auto;
-            font-family: $bold;
-            font-size: em(16);
-            color: #fff;
-            background-color: $lightbluebg;
-            border: none;
-            border-radius: 10px;
+        & .submit_wrap{
+            width: 100%;
+            max-width: 429px;
+
+            & .submit{
+                display: block;
+                width: 183px;
+                height: 40px;
+                margin: 32px auto 0 auto;
+                font-family: $bold;
+                font-size: em(16);
+                color: #fff;
+                background-color: $lightbluebg;
+                border: none;
+                border-radius: 10px;
+            }
         }
+        
+        & .forgot_password, & .registration{
+            display: block;
+            width: 100%;
+            max-width: 429px;
+            margin: 24px 0 0 0;
+            font-family: $regular;
+            font-size: em(13);
+            color: #77c3de;
+            text-align: center;
+            text-decoration: none;
+            letter-spacing: .4px;
+        }
+
+        & .registration{
+            margin: 6px 0 0 0;
+        }
+    }
+
+    & .other_logins{
+        margin: 58px 0 0 0;
+
+        & .title{
+            font-family: $regular2;
+            font-size: em(18);
+            color: #adadad;
+            text-align: center;
+        }
+
+        & .links{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 17px 0 0 0;
+            
+            & .link{
+                margin: 0 15px;
+                font-size: 30px;
+                color: #adadad;
+                text-decoration: none;
+
+                &:hover{
+                    color: #4781cf;
+                }
+            }
+        }
+
     }
 
 }

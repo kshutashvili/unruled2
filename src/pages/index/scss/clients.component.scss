@@ -1,0 +1,47 @@
+@import "../../../scss/base/helpers.scss";
+
+/* clients component start */
+
+.clients_component{
+    margin: 97px 0 90px 0;
+
+    & .title{
+        font-family: $regular2;
+        font-weight: normal;
+        font-size: em(24);
+        color: $gray3;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .4px;
+    }
+
+    & .clients_wrap{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width:100%;
+        max-width: 1490px;
+        margin: 79px auto 0 auto;
+
+        & .client{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 186px;
+            height: 75px;
+            border: 1px solid #eeeeee;
+            & span{
+                display: block;
+                @include sprite($client);
+            }
+            &:hover{
+                & span{
+                    @include sprite($client-hover);
+                }
+            }
+        }
+
+    }
+}
+
+/* clients component end */

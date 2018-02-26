@@ -15,7 +15,10 @@ const common = merge([
     {
         devtool: "source-map",
         entry: {
-            'index': paths.src + '/pages/index/index.js'
+            'index': paths.src + '/pages/index/index.js',
+            'portfolio': paths.src + '/pages/portfolio/portfolio.js',
+            'about': paths.src + '/pages/about/about.js',
+            'vacancy': paths.src + '/pages/vacancy/vacancy.js'
         },
         output: {
             path: paths.build,
@@ -30,6 +33,21 @@ const common = merge([
                 filename: 'index.html',
                 chunks: ['index', 'common'],
                 template: paths.src + '/pages/index/index.html'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'portfolio.html',
+                chunks: ['portfolio', 'common'],
+                template: paths.src + '/pages/portfolio/portfolio.html'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'about.html',
+                chunks: ['about', 'common'],
+                template: paths.src + '/pages/about/about.html'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'vacancy.html',
+                chunks: ['vacancy', 'common'],
+                template: paths.src + '/pages/vacancy/vacancy.html'
             }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'common'

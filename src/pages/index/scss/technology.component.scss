@@ -1,0 +1,40 @@
+@import "../../../scss/base/helpers.scss";
+
+/* technology component start */
+
+.technology_component{
+    margin: 96px 0 0 0;
+    padding: 0 0 113px 0;
+
+    & .title{
+        font-family: $regular;
+        font-weight: normal;
+        font-size: em(24);
+        color: $gray3;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+    }
+
+    & .content{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        max-width: 1340px;
+        margin: 96px auto 0 auto;
+
+        & .technology{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 119px;
+            height: 119px;
+            margin: 7.5px;
+            border: 1px solid #ededed;
+        }
+    }
+}
+
+/* technology component end */

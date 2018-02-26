@@ -1,0 +1,309 @@
+/* base */
+
+@import "../../scss/base/fonts.scss";
+@import "../../scss/base/helpers.scss";
+@import "../../scss/base/sprite.scss";
+@import "../../scss/base/main.scss";
+
+/* external */
+
+@import "../../scss/external/fontawesome-all.css";
+
+/* common components */
+
+@import "../../scss/components/header.component.scss";
+@import "../../scss/components/footer.component.scss";
+@import "../../scss/components/menu.component.scss";
+@import "../../scss/components/login.form.component.scss";
+
+/* style */
+
+.header_component{
+    height: 839px;
+    background-image: url("../../img/vacancy_header.png");
+    background-size: cover;
+
+    & .top_line{
+        align-items: flex-end;
+
+        & .logo{
+            width: 142px;
+            height: 32px;
+            margin: 16px 0 0 8px;
+            background-image: url("../../img/logo_color.png");
+        }
+
+        & .link_title{
+            display: block;
+            margin: 0 0 2px 0;
+            font-family: $regular2;
+            font-size: em(20);
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: .5px;
+        }
+        & .menu_wrap{
+            align-self: flex-start;
+            margin: 18px 0 0 0;
+
+            & .line{
+
+                & .menu_btn{
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    & .content{
+
+        & .bot_img{
+            margin: 101px auto 0 auto;
+            @include sprite($file2);
+        }
+
+        & > .title{
+            margin: 53px 0 0 0;
+            font-family: $regular;
+            font-weight: normal;
+            font-size: em(30);
+            color: #fff;
+            text-align: center;
+            letter-spacing: .7px;
+        }
+
+        & .subtitle{
+            width: 100%;
+            max-width: 780px;
+            margin: 48px auto 0 auto;
+            font-family: $regular;
+            font-size: em(18);
+            color: #f2f2f2;
+            text-align: center;
+            letter-spacing: .5px;
+            line-height: 1.5;
+        }
+
+        & .search_vacancy{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 66px 0 0 0;
+
+            & select{
+                outline: none;
+                width: 274px;
+                height: 40px;
+                margin: 0 9.5px;
+                padding: 0 18px;
+                font-family: $regular;
+                font-size: em(15);
+                color: #fff;
+                border: none;
+                border-radius: 10px;
+                background-color: rgba($color: #47266f, $alpha: .25);
+            }
+
+            & .submit{
+                outline: none;
+                width: 183px;
+                height: 40px;
+                margin: 0 9.5px;
+                font-family: $bold;
+                font-size: em(15);
+                color: $lightbluebg;
+                border: none;
+                border-radius: 10px;
+                background-color: #fff;
+            }
+        }
+
+        & .arrow_nav{
+            margin: 103px 0 0 0;
+            text-align: center;
+            font-size: 36px;
+            & a{
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+}
+
+.main_component{
+    margin: 60px 0 0;
+    padding: 0 0 48px 0;
+    
+    & .content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 1147px;
+        margin: 0 auto 0 auto;
+
+        & .block{
+            width: 550px;
+            margin: 0 0 25px 0;
+            padding: 30px 20px 30px 30px;
+            border: 1px solid transparent;
+            &:hover{
+                border: 1px solid rgba($color: $lightbluebg, $alpha: .15);
+            }
+
+            &__top_line{
+                display: flex;
+                justify-content: space-between;
+                font-family: $regular;
+
+                & .title{
+                    width: 70%;
+                    font-size: em(24);
+                    color: $lightbluebg;
+                    letter-spacing: .5px;
+                }
+
+                & .date{
+                    padding: 9px 0 0 0;
+                    font-size: em(16);
+                    color: #a7a7a7;
+                }
+            }
+
+            &__middle{
+                margin: 16px 0 0 0;
+                padding: 0 2px;
+                line-height: 1.4;
+                font-family: $regular;
+                font-size: em(16);
+                color: #7f7f7f;
+                letter-spacing: 0.3px;
+            }
+
+            &__bottom{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 21px 0 0 0;
+
+                & .activity{
+                    display: flex;
+                    align-items: center;
+                    font-family: $regular;
+
+                    & .views{
+                        display: flex;
+                        align-items: center;
+                        margin: 0 0 0 5px;
+                        color: $lightbluebg;
+                        font-size: em(16);
+                        
+                        & i.fas{
+                            margin: 0 10px 0 0;
+                            font-size: 22px;
+                        }
+                    }
+
+                    & .likes{
+                        display: flex;
+                        align-items: center;
+                        margin: 0 0 0 22px;
+                        color: #a8a8a8;
+                        font-size: em(16);
+                        
+                        & i.far{
+                            margin: 0 10px 0 0;
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                & .link{
+                    display: flex;
+                    align-items: center;
+                    margin: 2px 0 0 0;
+                    font-family: $regular;
+                    font-size: em(16);
+                    color: $lightbluebg;
+                    text-decoration: none;
+                    & i.fas{
+                        margin: 4px 0 0 11px;
+                    }
+                }
+            }
+        }
+    }
+
+    & .pagination_block{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0 0 0;
+
+        & .pagination{
+            display: flex;
+            align-items: center;
+
+            & .page{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 6px;
+                font-family: $regular;
+                font-size: em(14);
+                color: #9b9b9b;
+                text-decoration: none;
+                
+                &.active{
+                    color: $lightbluebg;
+                    border-bottom: 1px solid $lightbluebg;
+                }
+            }
+        }
+    }
+
+    & .form_wrap{
+        margin: 77px 0 0 0;
+
+        & .title{
+            font-family: $regular;
+            font-size: em(24);
+            color: #51565f;
+            text-align: center;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+    }
+
+    & .subscribe_form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 39px 0 0 0;
+
+        & .email{
+            outline: none;
+            width: 100%;
+            max-width: 429px;
+            height: 40px;
+            padding: 0 0 0 35px;
+            border: 1px solid #e8e8e8;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        & .submit{
+            outline: none;
+            width: 183px;
+            height: 40px;
+            margin: 0 0 0 25px;
+            font-family: $bold;
+            font-size: em(16);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            background-color: $lightbluebg;
+        }
+    }
+}

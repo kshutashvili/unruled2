@@ -1,8 +1,10 @@
 import "./index.scss";
 import "slick-carousel";
 
-import MenuList from '../../js/components/menu.list.component';
-import Menu from '../../js/components/menu.modal.component';
+import MenuModel from '../../js/components/menu.modal.component';
+
+const m = new MenuModel();
+
 
 let TopSlider = () => {
 
@@ -33,6 +35,7 @@ let TopSlider = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     TopSlider();
-    MenuList();
-    Menu();
+
+    m.init();
+
 });
