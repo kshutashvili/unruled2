@@ -13,7 +13,7 @@
 
 @import "../../scss/components/header.component.scss";
 @import "../../scss/components/footer.component.scss";
-@import "../../scss/components/menu.component.scss";
+@import "../../scss/components/modal.component.scss";
 @import "../../scss/components/login.form.component.scss";
 
 /* style */
@@ -76,10 +76,51 @@
 .main_component{
     padding: 0 0 74px 0;
 
+    & .charts_block{
+        display: flex;
+        justify-content: center;
+        transform: translateY(-42px);
+
+        & .chart_block{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            margin: 0 36px;
+
+            &__chart{
+                position: relative;
+                width: 142px;
+                height: 142px;
+                font-family: $semibold;
+                font-size: em(30);
+                color: #47266f;
+                border-radius: 50%;
+                background-color: #fff;
+                border: 1px solid #fff;
+                & svg{
+                    transform: rotatey(180deg);
+                }
+            }
+
+            &__info{
+                width: 100%;
+                margin: 38px 0 0 0;
+                font-family: $regular;
+                font-size: em(18);
+                color: #999999;
+                text-align: center;
+                word-break: break-all;
+                line-height: 1.6;
+            }
+        }
+        
+    }
+
     & .content{
         width: 100%;
         max-width: 733px;
-        margin: 285px auto 0 auto;
+        margin: 40px auto 0 auto;
 
         & .title{
             margin: 0 0 19px 0;

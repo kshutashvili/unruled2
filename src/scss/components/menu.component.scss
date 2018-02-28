@@ -2,252 +2,121 @@
 @import "../base/sprite.scss";
 
 .menu_component{
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none; //flex
-    justify-content: flex-end;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($color: #000000, $alpha: .3);
-    z-index: 1;
+    flex: 1 0 auto;
 
-    &.active{
-        display: flex;
+    &.hide{
+        display: none;
     }
 
-    & .content{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        background-color: #fff;
+    & .main{
+        padding: 0 0 0 69px;
 
-        & .top{
+        & .circles{
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin: 45px 0 0 0;
-            padding: 0 39px 0 46px;
-            & > .wrap{
-                display: flex;
-                align-items: center;
+            margin: 117px 0 0 0;
+            & .circle{
+                width: 9px;
+                height: 9px;
+                margin: 0 6px 0 0;
+                border-radius: 50%;
+
+                &.blue{
+                    background-color: $lightbluebg;
+                }
+    
+                &.purple{
+                    background-color: #624888;
+                }
+    
+                &.yellow{
+                    background-color: #f2af1c;
+                }
+    
+                &.violet{
+                    background-color: #d01777;
+                }
             }
+        }
 
-            & .lang{
-                display: flex;
-                align-items: center;
-                font-family: $regular;
-                font-size: em(18);
-                color: #acacac;
+        & .menu_wrap{
+            margin: 102px 0 0 1px;
+            width: 100%;
+            max-width: 500px;
 
-                & a{
-                    color: #acacac;
-                    text-decoration: none;
+            & .menu_list{
+                list-style-type: none;
 
-                    &.active{
-                        text-transform: uppercase;
+                & li{
+                    position: relative;
+                    margin: 23px 0;
+                    font-family: $regular;
+                    font-size: 24px;
+                    color: #51565f;
+                    letter-spacing: .4px;
+
+                    &:hover{
                         color: $lightbluebg;
-                    }
-                }
-            }
 
-            & .nav{
-                display: flex;
-                margin: 0 0 0 24px;
-                & a{
-                    padding: 0 13px;
-                    font-family: $regular;
-                    font-size: em(18);
-                    color: #acacac;
-                    text-decoration: none;
-                    letter-spacing: 0.5px;
-
-                    &.active{
-                        color: $lightbluebg;
-                    }
-                }
-            }
-
-            & .auth{
-                display: flex;
-                align-items: center;
-
-                & .user{
-                    display: flex;
-                    align-items: center;
-                    margin: 0 28px 0 0;
-                    font-family: $regular;
-                    font-size: em(18);
-                    color: #adadad;
-                    text-decoration: none;
-                    letter-spacing: 0.4px;
-                    & i{
-                        margin: 0 0 0 14px;
-                    }
-                }
-
-                & .login_btn{
-                    display: flex;
-                    align-items: center;
-                    margin: 0 27px 0 0;
-                    font-family: $regular;
-                    font-size: em(18);
-                    color: #adadad;
-                    text-decoration: none;
-                    letter-spacing: 0.4px;
-                    & i{
-                        margin: 0 0 0 11px;
-                    }
-                }
-
-                & .menu_btn{
-                    display: flex;
-                    align-items: center;
-                    font-family: $regular;
-                    font-size: em(18);
-                    color: $lightbluebg;
-                    text-decoration: none;
-
-                }
-
-                & .close{
-                    cursor: pointer;
-                    display: block;
-                    margin: 3px 0 0 19px;
-                    @include sprite($menu_close);
-                }
-            }
-        }
-
-        & .bottom{
-            flex: 0 0 auto;
-
-            & .socials{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                overflow: hidden;
-            }
-        }
-    }
-
-    & .menu_block{
-        flex: 1 0 auto;
-
-        &.hide{
-            display: none;
-        }
-
-        & .main{
-            padding: 0 0 0 69px;
-
-            & .circles{
-                display: flex;
-                align-items: center;
-                margin: 117px 0 0 0;
-                & .circle{
-                    width: 9px;
-                    height: 9px;
-                    margin: 0 6px 0 0;
-                    border-radius: 50%;
-
-                    &.blue{
-                        background-color: $lightbluebg;
-                    }
-        
-                    &.purple{
-                        background-color: #624888;
-                    }
-        
-                    &.yellow{
-                        background-color: #f2af1c;
-                    }
-        
-                    &.violet{
-                        background-color: #d01777;
-                    }
-                }
-            }
-
-            & .menu_wrap{
-                margin: 102px 0 0 1px;
-                width: 100%;
-                max-width: 500px;
-
-                & .menu_list{
-                    list-style-type: none;
-
-                    & li{
-                        position: relative;
-                        margin: 23px 0;
-                        font-family: $regular;
-                        font-size: 24px;
-                        color: #51565f;
-                        letter-spacing: .4px;
-
-                        &:hover{
-                            color: $lightbluebg;
-
-                            & a{
-                                color: $lightbluebg;
-                                & i{
-                                    opacity: 1;
-                                }
-                            }
-                        }
-                        &.dropdown{
-                            &.active{
-                                & .sub{
-                                    display: block;
-                                }
-                            }
-                        }
                         & a{
-                            display: flex;
-                            align-items: center;
-                            color: #51565f;
-                            text-decoration: none;
-
-                            & .news{
-                                display: block;
-                                margin: 4px 0 0 15px;
-                                padding: 1.5px 5.8px;
-                                font-family: $bold;
-                                font-size: 14px;
-                                color: #fff;
-                                background-color: $lightbluebg;
-                                border-radius: 50%;
-
-                            }
-
+                            color: $lightbluebg;
                             & i{
-                                opacity: 0;
-                                margin: 7px 0 0 10px;
+                                opacity: 1;
                             }
                         }
+                    }
+                    &.dropdown{
+                        &.active{
+                            & .sub{
+                                display: block;
+                            }
+                        }
+                    }
+                    & a{
+                        display: flex;
+                        align-items: center;
+                        color: #51565f;
+                        text-decoration: none;
 
-                        & .sub{
-                            display: none;
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                            z-index: 1;
+                        & .news{
+                            display: block;
+                            margin: 4px 0 0 15px;
+                            padding: 1.5px 5.8px;
+                            font-family: $bold;
+                            font-size: 14px;
+                            color: #fff;
+                            background-color: $lightbluebg;
+                            border-radius: 50%;
 
-                            & .menu_list{
+                        }
 
-                                & li{
-                                    margin: 11.5px 0;
-                                    font-family: $light;
-                                    font-size: 18px;
+                        & i{
+                            opacity: 0;
+                            margin: 7px 0 0 10px;
+                        }
+                    }
+
+                    & .sub{
+                        display: none;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        z-index: 1;
+
+                        & .menu_list{
+
+                            & li{
+                                margin: 11.5px 0;
+                                font-family: $light;
+                                font-size: 18px;
+                                color: $lightbluebg;
+
+                                & a{
                                     color: $lightbluebg;
-
+                                }
+                                &:hover{
                                     & a{
-                                        color: $lightbluebg;
-                                    }
-                                    &:hover{
-                                        & a{
-                                            text-decoration: underline;
-                                        }
+                                        text-decoration: underline;
                                     }
                                 }
                             }
@@ -256,7 +125,6 @@
                 }
             }
         }
-
     }
 
 }

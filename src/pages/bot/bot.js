@@ -1,4 +1,4 @@
-import "./about.scss";
+import "./bot.scss";
 
 import MenuModel from '../../js/components/menu.modal.component';
 import Bar from "progressbar.js";
@@ -16,7 +16,6 @@ let circleChart = () => {
 
         let bar = new Bar.Circle(item, {
             strokeWidth: 14,
-            color: "#47266f",
             text: {
                 //value: `${value}%`
             },
@@ -45,6 +44,7 @@ let circleChart = () => {
 document.addEventListener("DOMContentLoaded", () => {
 
     m.init();
+
     circleChart();
 
 });

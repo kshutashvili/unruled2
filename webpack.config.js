@@ -18,7 +18,11 @@ const common = merge([
             'index': paths.src + '/pages/index/index.js',
             'portfolio': paths.src + '/pages/portfolio/portfolio.js',
             'about': paths.src + '/pages/about/about.js',
-            'vacancy': paths.src + '/pages/vacancy/vacancy.js'
+            'vacancy': paths.src + '/pages/vacancy/vacancy.js',
+            'blog': paths.src + '/pages/blog/blog.js',
+            'article': paths.src + '/pages/article/article.js',
+            'article2': paths.src + '/pages/article2/article2.js',
+            'bot': paths.src + '/pages/bot/bot.js'
         },
         output: {
             path: paths.build,
@@ -48,6 +52,26 @@ const common = merge([
                 filename: 'vacancy.html',
                 chunks: ['vacancy', 'common'],
                 template: paths.src + '/pages/vacancy/vacancy.html'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'blog.html',
+                chunks: ['blog', 'common'],
+                template: paths.src + '/pages/blog/blog.html'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'article.html',
+                chunks: ['article', 'common'],
+                template: paths.src + '/pages/article/article.html'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'article2.html',
+                chunks: ['article2', 'common'],
+                template: paths.src + '/pages/article2/article2.html'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'bot.html',
+                chunks: ['bot', 'common'],
+                template: paths.src + '/pages/bot/bot.html'
             }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'common'

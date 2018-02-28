@@ -36,6 +36,6 @@ let TopSlider = () => {
 document.addEventListener("DOMContentLoaded", () => {
     TopSlider();
 
-    m.init();
+    //m.init();
 
 });
