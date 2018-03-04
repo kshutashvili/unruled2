@@ -1,0 +1,55 @@
+@import "../base/helpers.scss";
+@import "../base/sprite.scss";
+
+.message_component{
+    flex: 1 0 auto;
+
+    &.hide{
+        display: none;
+    }
+
+    & .logo_line{
+        display: flex;
+        justify-content: center;
+        margin: 200px 0 0 0;
+
+        & .logo{
+            display: block;
+            @include sprite($mail-icon);
+        }
+    }
+
+    & > .title{
+        margin: 32px 0 0 0;
+        font-family: $bold;
+        font-size: em(18);
+        color: #4b3769;
+        text-align: center;
+        letter-spacing: .4px;
+    }
+
+    & .message{
+        margin: 45px 0 0 0;
+        font-family: $regular;
+        font-size: em(18);
+        color: #c3c3c3;
+        text-align: center;
+        letter-spacing: 0.64px;
+        line-height: 2;
+    }
+
+    & .link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 183px;
+        height: 40px;
+        margin: 127px auto 0 auto;
+        font-family: $bold;
+        font-size: em(16);
+        color: #fff;
+        text-decoration: none;
+        background-color: #4a4089;
+        border-radius: 10px;
+    }
+}

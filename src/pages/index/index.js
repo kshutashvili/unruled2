@@ -2,6 +2,7 @@ import "./index.scss";
 import "slick-carousel";
 
 import MenuModel from '../../js/components/menu.modal.component';
+import FileUpload from '../../js/components/file.upload.component';
 
 const m = new MenuModel();
 
@@ -35,7 +36,9 @@ let TopSlider = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     TopSlider();
+    FileUpload();
+    m.init();
 
-    //m.init();
+
 
 });

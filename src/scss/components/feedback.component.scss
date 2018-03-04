@@ -1,0 +1,143 @@
+@import "../base/helpers.scss";
+@import "../base/sprite.scss";
+
+.feedback_component{
+    flex: 1 0 auto;
+
+    &.hide{
+        display: none;
+    }
+
+    & .logo_line{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 136px 0 0 0;    
+
+        & .logo{
+            display: block;
+            margin: 0 0 0 21px;
+            @include sprite($logo-feedback);
+        }
+    } 
+
+    & > .title{
+        margin: 65px 0 0 0;
+        font-family: $regular;
+        font-size: em(28);
+        color: #51565f;
+        text-align: center;
+    }
+    
+    & .feedback_form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 67px 0 0 0;
+
+        & .input_wrap{
+            width: 429px;
+            margin: 0 0 34px 0;
+            &.msg{
+                margin: 0;
+            }
+
+            & input, & textarea{
+                width: 100%;
+                font-family: $regular;
+                font-size: em(16);
+                color: #b8b8b8;
+                text-align: center;
+                border: 2px solid #e8e8e8;
+                border-radius: 10px;
+            }
+            
+            & input{
+                height: 40px;
+            }
+            
+            & textarea{
+                padding: 5px 0 0 0;
+                height: 82px;
+            }
+        }
+
+        & .file_upload_block{
+            display: flex;
+            flex-wrap: wrap;
+            width: 429px;
+            margin: 7px 0 0 0;
+
+            & .file{
+                display: flex;
+                align-items: center;
+                width: 117px;
+                margin: 0 26px 15px 0;
+
+                &:hover{
+
+                    & .icon{
+                        color: $lightbluebg;
+                    }
+
+                    & .name{
+                        color: $lightbluebg;
+
+                        & i{
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                & .icon{
+                    font-size: 30px;
+                    color: #b8b8b8;
+                }
+
+                & .name{
+                    margin: 0 0 0 10px;
+                    font-family: $regular;
+                    font-size: em(14);
+                    color: #b8b8b8;
+                    word-break: break-all;
+                    & i{
+                        cursor: pointer;
+                        margin: 0 0 0 10px;
+                        color: #d01777;
+                        opacity: 0;
+                    }
+                }
+
+            }
+
+            & .file_load{
+                cursor: pointer;
+                margin: 0 0 0 0;
+                font-family: $regular;
+                font-size: em(14);
+                color: $lightbluebg;
+                & input{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+
+        & .submit{
+            display: block;
+            width: 183px;
+            height: 40px;
+            margin: 41px 0 0 18px;
+            font-family: $bold;
+            font-size: em(16);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            background-color: $lightbluebg;
+        }
+    }
+
+}

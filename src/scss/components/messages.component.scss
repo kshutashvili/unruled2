@@ -1,0 +1,215 @@
+@import "../base/helpers.scss";
+
+.messages_component{
+    flex: 1 0 auto;
+
+    &.hide{
+        display: none;
+    }
+
+    & .circles{
+        display: flex;
+        align-items: center;
+        margin: 64px 0 0 69px;
+        & .circle{
+            width: 9px;
+            height: 9px;
+            margin: 0 6px 0 0;
+            border-radius: 50%;
+
+            &.blue{
+                background-color: $lightbluebg;
+            }
+
+            &.purple{
+                background-color: #624888;
+            }
+
+            &.yellow{
+                background-color: #f2af1c;
+            }
+
+            &.violet{
+                background-color: #d01777;
+            }
+        }
+    }
+
+    &__content{
+        margin: 61px 0 0 0;
+        padding: 0 43px 0 58px;
+
+        & .breadcrumbs{
+            display: flex;
+            list-style-type: none;
+            margin: 0 0 0 10px;
+
+            & li{
+                & a{
+                    display: flex;
+                    align-items: center;
+                    font-family: $regular;
+                    font-size: em(16);
+                    color: $lightbluebg;
+                    text-decoration: none;
+                    opacity: .42;
+
+                    & i{
+                        margin: 3px 17px 0 0;
+                    }
+                }
+            }
+        }
+
+        &__top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 17px 0 0 0;
+
+            & .title{
+                display: flex;
+                align-items: center;
+                margin: 0 0 0 10px;
+                font-family: $regular;
+                font-weight: normal;
+                font-size: em(30);
+                color: $lightbluebg;
+                letter-spacing: 1px;
+
+                & .amount{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 6px 0 0 20px;
+                    padding: 2px 6.5px;
+                    font-family: $bold;
+                    font-size: 16px;
+                    color: #fff;
+                    border-radius: 50%;
+                    background-color: $lightbluebg;
+                }
+    
+            }
+
+            & .clear_all_msg{
+                display: block;
+                margin: 4px 0 0 0;
+                font-family: $regular;
+                font-size: em(14);
+                color: #adadad;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+        & .messages{
+            margin: 23px 0 0 0;
+            & .message{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 5px 0 0 0;
+                padding: 15px 19px 15px 4px;
+
+                &:hover{
+                    background-color: #f5fcff;
+
+                    & .title, & .date{
+                        color: $lightbluebg;
+                    }
+
+                }
+
+                &.active{
+                    background-color: #f5fcff;
+
+                    & .check{
+                        & i{
+                            opacity: 1;
+                        }
+                    }
+
+                    & .title, & .date{
+                        color: $lightbluebg;
+                    }
+
+                }
+
+                & .check{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 27px;
+                    height: 27px;
+                    margin: 0 15px 0 0;
+                    font-size: 16px;
+                    color: $lightbluebg;
+                    background-color: #fff;
+                    border: 1px solid #e8e8e8;
+                    border-radius: 10px;
+                    & i{
+                        opacity: 0;
+                    }
+                }
+
+                & .title{
+                    width: 126px;
+                    height: 19px;
+                    margin: 0 41px 0 0;
+                    font-family: $bold;
+                    font-size: em(16);
+                    color: #676767;
+                    overflow: hidden;
+                }
+
+                & .caption{
+                    flex-grow: 1;
+                    font-family: $regular;
+                    font-size: em(14);
+                    color: #adadad;
+                    letter-spacing: .5px;
+
+                    & b{
+                        font-family: $bold;
+                        font-size: 16px;
+                        color: #656565;
+                    }
+                }
+
+                & .date{
+                    font-family: $regular;
+                    font-size: em(16);
+                    color: #676767;
+                }
+            }
+
+        }
+
+        &__bottom{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 25px 0 0 0;
+
+            & .link{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 183px;
+                height: 40px;
+                font-family: $bold;
+                font-size: em(16);
+                color: #fff;
+                text-decoration: none;
+                background-color: $lightbluebg;
+                border-radius: 10px;
+            }
+        }
+        
+    }
+
+}

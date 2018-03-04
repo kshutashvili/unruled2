@@ -1,0 +1,79 @@
+/* base */
+
+@import "../../scss/base/fonts.scss";
+@import "../../scss/base/helpers.scss";
+@import "../../scss/base/sprite.scss";
+@import "../../scss/base/main.scss";
+
+/* external */
+
+@import "../../scss/external/fontawesome-all.css";
+
+
+/* style */
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header_component{
+    display: flex;
+    justify-content: center;
+    padding: 57px 0 0 0;
+
+    & .logo{
+        display: block;
+        @include sprite($logo_404);
+    }
+
+}
+
+.main_component{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 auto;
+
+    & .icon{
+        display: block;
+        margin: 73px 0 0 13px;
+        @include sprite($icon_404);
+    }
+
+    & .message{
+        margin: 31px 0 0 0;
+        font-family: $regular;
+        font-size: em(18);
+        color: #c3c3c3;
+        text-align: center;
+        letter-spacing: 0.45px;
+        line-height: 2;
+    }
+
+    & .link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 183px;
+        height: 40px;
+        margin: 77px 0 0 0;
+        font-family: $bold;
+        font-size: em(16);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+        background-color: #4a4089;
+    }
+}
+
+.footer_component{
+
+    & .socials{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+}
