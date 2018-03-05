@@ -3,16 +3,32 @@
 .footer_component{
     background-color: $lightbluebg;
 
+    @include media-max(480){
+        margin: 30px 0 0 0;
+    }
+
     & .content{
         display: flex;
         justify-content: space-between;
         padding: 35px 75px 34px 75px;
+        @include media-max(1429){
+            padding: 34px 0;
+        }
+        @include media-max(480){
+            padding: 35px 25px;
+        }
         
         & .block{
+            @include media-max(768){
+                display: none;
+            }
 
             &.contacts{
                 width: 100%;
                 max-width: 860px;
+                @include media-max(768){
+                    display: block;
+                }
             }
 
             & .title{
@@ -20,11 +36,20 @@
                 font-size: em(18);
                 color: #fff;
                 letter-spacing: .5px;
+
+                @include media-max(480){
+                    font-size: em(24);
+                }
             }
 
             & .lists{
                 display: flex;
                 justify-content: space-between;
+
+                @include media-max(480){
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                }
 
                 & .list{
                     margin: 33px 0 0 0;
@@ -33,6 +58,16 @@
                     font-family: $regular;
                     font-size: em(16);
                     color: #fff;
+
+                    @include media-max(480){
+                        &:nth-child(2){
+                            margin: 33px 0 0 30px;
+                        }
+                        &:nth-child(3){
+                            display: none;
+                        }
+                    }
+
                     & li{
                         margin: 0 0 16px 0;
 

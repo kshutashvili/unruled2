@@ -3,6 +3,9 @@
 /* network component start */
 
 .network_component{
+    @include media-max(768){
+        padding: 0 0 30px 0;
+    }
 
     & .content{
         display: flex;
@@ -10,13 +13,29 @@
         width: 100%;
         max-width: 1622px;
         margin: 0 auto 0 auto;
+
+        @include media-max(768){
+            flex-direction: column;
+        }
+
         & .col{
             width: calc(100% / 3);
             padding: 79px 0 80px 0;
             border-left: 1px solid #e8e8e8;
 
+            @include media-max(768){
+                width: 100%;
+                margin: 30px 0 0 0;
+                padding: 0;
+                border: none;
+            }
+
             &:last-child{
                 border-right: 1px solid #e8e8e8;
+
+                @include media-max(768){
+                    border: none;
+                }
             }
 
             & .top_line{
@@ -66,12 +85,21 @@
                         font-size: em(24);
                         color: $lightbluebg;
                         letter-spacing: .5px;
+                        @include media-max(1429){
+                            font-size: em(18);
+                        }
+                        @include media-max(480){
+                            font-size: em(20);
+                        }
                     }
 
                     & .date{
                         padding: 9px 0 0 0;
                         font-size: em(16);
                         color: #a7a7a7;
+                        @include media-max(480){
+                            font-size: em(13);
+                        }
                     }
                 }
 
@@ -102,10 +130,16 @@
                             margin: 0 0 0 5px;
                             color: $lightbluebg;
                             font-size: em(16);
+                            @include media-max(480){
+                                font-size: em(13);
+                            }
                             
                             & i.fas{
                                 margin: 0 10px 0 0;
                                 font-size: 22px;
+                                @include media-max(480){
+                                    font-size: 18px;
+                                }
                             }
                         }
 
@@ -115,10 +149,16 @@
                             margin: 0 0 0 22px;
                             color: #a8a8a8;
                             font-size: em(16);
+                            @include media-max(480){
+                                font-size: em(13);
+                            }
                             
                             & i.far{
                                 margin: 0 10px 0 0;
                                 font-size: 22px;
+                                @include media-max(480){
+                                    font-size: 18px;
+                                }
                             }
                         }
                     }
@@ -131,6 +171,11 @@
                         font-size: em(16);
                         color: $lightbluebg;
                         text-decoration: none;
+
+                        @include media-max(480){
+                            font-size: em(13);
+                        }
+
                         & i.fas{
                             margin: 4px 0 0 11px;
                         }

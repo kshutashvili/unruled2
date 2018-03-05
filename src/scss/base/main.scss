@@ -12,6 +12,22 @@ body{
     max-width: 1763px;
     margin: 0 auto;
     &--full{
+        max-width: 100% !important;
+    }
+    
+    @include media-max(1793){
+        max-width: 1600px;
+    }
+    @include media-max(1600){
+        max-width: 1400px;
+    }
+    @include media-max(1429){
+        max-width: 1200px;
+    }
+    @include media-max(1229){
+        max-width: 1024px;
+    }
+    @include media-max(768){
         max-width: 100%;
     }
 }

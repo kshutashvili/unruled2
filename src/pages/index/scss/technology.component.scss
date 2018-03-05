@@ -33,6 +33,11 @@
             height: 119px;
             margin: 7.5px;
             border: 1px solid #ededed;
+            @include media-max(480){
+                width: 100px;
+                height: 100px;
+                margin: 6px;
+            }
         }
     }
 }

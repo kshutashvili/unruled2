@@ -27,12 +27,18 @@ body{
     
     & .top_line{
         align-items: flex-end;
+        @include media-max(480){
+            align-items: center;
+        }
 
         & .logo{
             width: 142px;
             height: 32px;
             margin: 16px 0 0 8px;
             background-image: url("../../img/logo_color.png");
+            @include media-max(480){
+                margin: 0;
+            }
         }
 
         & .link_title{
@@ -43,11 +49,21 @@ body{
             color: $gray4;
             text-decoration: none;
             letter-spacing: .5px;
+            @include media-max(480){
+                margin: 0;
+            }
+            @include media-max(375){
+                display: none;
+            }
         }
 
         & .menu_wrap{
             align-self: flex-start;
             margin: 18px 0 0 0;
+            @include media-max(480){
+                align-self: auto;
+                margin: 0;
+            }
 
             & .line{
 
@@ -82,6 +98,9 @@ body{
                 font-size: em(16);
                 color: #a7a7a7;
                 text-align: center;
+                @include media-max(480){
+                    font-size: em(13);
+                }
             }
 
             &__title{
@@ -91,6 +110,10 @@ body{
                 color: $lightbluebg;
                 text-align: center;
                 letter-spacing: .7px; 
+                @include media-max(480){
+                    padding: 0 23px;
+                    font-size: em(28);
+                }
             }
 
             &__caption{
@@ -101,6 +124,10 @@ body{
                 font-size: em(24);
                 color: #888888;
                 line-height: 1.5;
+                @include media-max(480){
+                    padding: 0 23px;
+                    font-size: em(20);
+                }
             }
 
             &__text{
@@ -112,6 +139,9 @@ body{
                 color: #888888;
                 word-wrap: break-word;
                 line-height: 1.4;
+                @include media-max(480){
+                    padding: 0 23px;
+                }
             }
 
             &__bottom{
@@ -121,6 +151,10 @@ body{
                 width: 100%;
                 max-width: 720px;
                 margin: 43px auto 0 auto;
+
+                @include media-max(480){
+                    padding: 0 23px;
+                }
 
                 & .activity{
                     display: flex;
@@ -133,10 +167,16 @@ body{
                         margin: 0 0 0 5px;
                         color: $lightbluebg;
                         font-size: em(16);
+                        @include media-max(480){
+                            font-size: em(13);
+                        }
                         
                         & i.fas{
                             margin: 0 10px 0 0;
                             font-size: 22px;
+                            @include media-max(480){
+                                font-size: 18px;
+                            }
                         }
                     }
 
@@ -146,10 +186,16 @@ body{
                         margin: 0 0 0 22px;
                         color: #a8a8a8;
                         font-size: em(16);
+                        @include media-max(480){
+                            font-size: em(13);
+                        }
                         
                         & i.far{
                             margin: 0 10px 0 0;
                             font-size: 22px;
+                            @include media-max(480){
+                                font-size: 18px;
+                            }
                         }
                     }
                 }
@@ -162,6 +208,9 @@ body{
                     font-size: em(16);
                     color: $lightbluebg;
                     text-decoration: none;
+                    @include media-max(480){
+                        font-size: em(13);
+                    }
                     & i.fas{
                         margin: 4px 0 0 11px;
                     }
@@ -358,6 +407,10 @@ body{
             align-items: center;
             justify-content: center;
             margin: 40px 0 0 0;
+
+            @include media-max(480){
+                flex-direction: column;
+            }
     
             & .email{
                 outline: none;
@@ -381,6 +434,10 @@ body{
                 border: none;
                 border-radius: 10px;
                 background-color: $lightbluebg;
+
+                @include media-max(480){
+                    margin: 23px 0 0 0;
+                }
             }
         }
 

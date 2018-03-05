@@ -14,6 +14,7 @@
 @import "../../scss/components/header.component.scss";
 @import "../../scss/components/footer.component.scss";
 @import "../../scss/components/modal.component.scss";
+@import "../../scss/components/menu.component.scss";
 @import "../../scss/components/login.form.component.scss";
 
 /* style */
@@ -23,15 +24,26 @@
     background-image: url("../../img/bot_header_bg.png");
     background-size: cover;
 
+    @include media-max(480){
+        height: auto;
+    }
+
     & .top_line{
         align-items: flex-end;
         padding: 20px 0 0 0;
+        @include media-max(480){
+            align-items: center;
+            padding: 20px 23px 0 23px;
+        }
 
         & .logo{
             width: 142px;
             height: 32px;
             margin: 10px 0 0 3px;
             background-image: url("../../img/logo_color.png");
+            @include media-max(480){
+                margin: 0;
+            }
         }
 
         & .link_title{
@@ -42,10 +54,17 @@
             color: #fff;
             text-decoration: none;
             letter-spacing: .5px;
+            @include media-max(480){
+                margin: 0;
+            }
         }
         & .menu_wrap{
             align-self: flex-start;
             margin: 5px 0 0 0;
+            @include media-max(480){
+                align-self: auto;
+                margin: 0;
+            }
 
             & .line{
 
@@ -59,17 +78,28 @@
     & .main_content_block{
         display: flex;
         align-items: center;
+        @include media-max(480){
+            flex-direction: column;
+        }
 
         & .description{
             width: 100%;
             max-width: 520px;
             margin: 225px 0 0 356px;
 
+            @include media-max(480){
+                margin: 66px 0 0 0;
+            }
+
             & > .title{
                 font-family: $bold;
                 font-size: em(50);
                 color: #fff;
                 letter-spacing: 1.3px;
+                @include media-max(480){
+                    padding: 0 23px;
+                    text-align: center;
+                }
             }
 
             & .msg{
@@ -80,6 +110,11 @@
                 letter-spacing: .4px;
                 word-break: break-all;
                 line-height: 1.4;
+                @include media-max(480){
+                    margin: 68px 0 0 0;
+                    padding: 0 23px;
+                    text-align: center;
+                }
             }
 
             & .arrow_down{
@@ -91,6 +126,10 @@
                 margin: 89px 0 0 0;
                 border-radius: 50%;
                 background-color: #fff;
+
+                @include media-max(480){
+                    display: none;
+                }
 
                 & a{
                     display: flex;
@@ -105,6 +144,9 @@
             width: 100px;
             height: 100px;
             margin: 0px 0 0 210px;
+            @include media-max(480){
+                margin: 153px 0 219px 0;
+            }
 
             & .logo_img{
                 position: absolute;
@@ -114,6 +156,12 @@
                 transform: translateY(-53px);
                 @include sprite($iphone);
                 z-index: 1;
+
+                @include media-max(480){
+                    left: 50%;
+                    transform: translate(-50%, -53px);
+                    @include sprite($iphone-mobile);
+                }
             }
         }
         
@@ -133,6 +181,11 @@
             font-family: $regular;
             font-size: em(16);
             color: #7f7f7f;
+            @include media-max(480){
+                margin: 373px 0 0 0;
+                padding: 0 35px;
+                font-size: em(18);
+            }
 
             & p{
                 margin: 0 0 21px 0;
@@ -149,6 +202,9 @@
             font-size: em(30);
             color: $lightbluebg;
             text-align: center;
+            @include media-max(480){
+                display: none;
+            }
         }
 
         & .content{
@@ -160,6 +216,10 @@
             & .wrap{
                 display: flex;
                 width: 1290px;
+                @include media-max(480){
+                    flex-direction: column;
+                    width: 100%;
+                }
             }
 
             & .robot_wrap{
@@ -167,6 +227,13 @@
                 width: 311px;
                 height: 209px;
                 margin: 0 0 0 59px;
+                @include media-max(480){
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    height: auto;
+                    margin: 0;
+                }
 
                 & .robot{
                     position: absolute;
@@ -181,6 +248,12 @@
                     background-repeat: no-repeat;
                     background-position: center center;
                     box-shadow: 0px 0px 35px 0px rgba(71,38,111,0.47);
+                    @include media-max(480){
+                        position: static;
+                        transform: translate(0,0);
+                        background-color: transparent;
+                        box-shadow: none;
+                    }
                 }
 
             }
@@ -195,6 +268,12 @@
                     color: #999999;
                     letter-spacing: 0.43px;
                     line-height: 1.5;
+                    @include media-max(480){
+                        width: 100%;
+                        margin: 44px 0 0 0;
+                        padding: 0 36px;
+                        word-break: break-all;
+                    }
                 }
 
                 & .btns_wrap{
@@ -202,6 +281,12 @@
                     align-items: center;
                     justify-content: flex-end;
                     margin: 31px 0 0 421px;
+
+                    @include media-max(480){
+                        justify-content: space-between;
+                        margin: 31px 0 0 0;
+                        padding: 0 15px;
+                    }
 
                     & a{
                         display: flex;
@@ -215,6 +300,11 @@
                         color: #fff;
                         text-decoration: none;
                         border-radius: 10px;
+                        @include media-max(480){
+                            width: 220px;
+                            height: 48px;
+                            margin: 0;
+                        }
                         &.call_btn{
                             color: #a6a6a6;
                             background-color: #e8e8e8;
@@ -243,6 +333,9 @@
             display: flex;
             justify-content: center;
             margin: 119px 0 0 0;
+            @include media-max(480){
+                flex-wrap: wrap;
+            }
     
             & .chart_block{
                 display: flex;
@@ -250,6 +343,9 @@
                 align-items: center;
                 width: 200px;
                 margin: 0 36px;
+                @include media-max(480){
+                    margin: 0 5px 50px 5px;
+                }
     
                 &__chart{
                     position: relative;
